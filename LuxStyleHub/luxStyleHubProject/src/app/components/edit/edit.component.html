@@ -1,0 +1,87 @@
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+  </style>
+</head>
+<body *ngIf="showPage" [@fadeIn]="!showPage">
+  <main class="form-signin m-auto">
+    <div class="container-fluid w-100">
+      <form class="w-50 text-center container">
+        <h2 class="pt-5 fw-bold">MODIFICA IL TUO PRODOTTO!</h2>
+
+        <div class="m-2 text-light">
+          <input
+            placeholder="nome"
+            #nomes="ngModel"
+            #update="ngModel"
+            ngModel
+            id="gusto"
+            type="text"
+            class="form-control"
+            name="gusto"
+            [(ngModel)]="prodotto.nome"
+          />
+          <span *ngIf="update.invalid && nomes.touched"
+            >Campo obbligatorio</span
+          >
+        </div>
+        <div class="m-2 text-light">
+          <input
+            placeholder="descrizione"
+            #update="ngModel"
+            ngModel
+            id="prezzo"
+            type="text"
+            class="form-control"
+            name="prezzo"
+            [(ngModel)]="prodotto.descrizione"
+          />
+          <span *ngIf="update.invalid && nomes.touched"
+            >Campo obbligatorio</span
+          >
+        </div>
+        <div class="m-2 text-light">
+          <input
+            #nomes="ngModel"
+            ngModel
+            placeholder="prezzo"
+            id="ingredienti"
+            type="number"
+            class="form-control"
+            name="ingredienti"
+            [(ngModel)]="prodotto.prezzo"
+          />
+        </div>
+        <div class="m-2 text-light">
+          <input
+            #nomes="ngModel"
+            ngModel
+            id="aggiunte"
+            placeholder="url"
+            type="text"
+            class="form-control"
+            name="aggiunte"
+            [(ngModel)]="prodotto.immagineUrl"
+          />
+        </div>
+        <div class="m-2 text-light">
+          <input
+            #nomes="ngModel"
+            ngModel
+            placeholder="recensione"
+            id="ingredienti"
+            type="text"
+            class="form-control"
+            name="ingredienti"
+            [(ngModel)]="prodotto.recensione"
+          />
+        </div>
+        <button class="btn btn-primary m-2" (click)="edit()">
+          Modifica
+        </button>
+      </form>
+    </div>
+  </main>
+</body>
+
+<!-- <img [src]="prodotto.immagineUrl" alt=""> -->

@@ -1,0 +1,64 @@
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+  </style>
+</head>
+<main>
+  <div class="container px-4 py-5">
+    <h2 class="pb-2">Chi siamo</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div class="col d-flex flex-column align-items-start gap-2">
+        <h2 class="fw-bold text-body-emphasis">
+          Benvenuto nel nostro negozio online!
+        </h2>
+        <p class="text-body-secondary fw-bold">
+          Siamo il tuo negozio di fiducia per una vasta selezione di scarpe,
+          t-shirt, <br> jeans e sweatshirt di alta qualità. Trova il tuo stile unico
+          oggi stesso!
+        </p>
+        <a [routerLink]="['/dashboard']" class="btn btn-warning btn-lg"
+          >Esplora la collezione</a
+        >
+      </div>
+
+      <div class="col">
+        <div class="row row-cols-1 row-cols-sm-2 g-4 fw-bold">
+          <div class="col d-flex flex-column gap-2">
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Scarpe</h4>
+            <p class="text-body-secondary">
+              Scopri la nostra vasta selezione di scarpe di alta qualità per
+              uomo, donna e bambino, per ogni occasione.
+            </p>
+          </div>
+
+          <div class="col d-flex flex-column gap-2 fw-bold">
+            <h4 class="fw-semibold mb-0 text-body-emphasis">T-Shirt</h4>
+            <p class="text-body-secondary">
+              Scegli tra una vasta gamma di t-shirt con design unici e stampe di
+              tendenza, perfette per esprimere la tua personalità.
+            </p>
+          </div>
+
+          <div class="col d-flex flex-column gap-2 fw-bold">
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Jeans</h4>
+            <p class="text-body-secondary">
+              Scopri i nostri jeans di alta qualità, perfetti per un look casual
+              e alla moda. Disponibili in una varietà di stili e taglie.
+            </p>
+          </div>
+
+          <div class="col d-flex flex-column gap-2 fw-bold">
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Sweatshirt</h4>
+            <p class="text-body-secondary">
+              Resta al caldo e alla moda con le nostre confortevoli sweatshirt,
+              ideali per le giornate fresche o per lo sport.
+            </p>
+          </div>
+
+          <!-- Aggiungi ulteriori icone e descrizioni qui, se necessario -->
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

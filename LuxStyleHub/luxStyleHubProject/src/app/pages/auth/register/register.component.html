@@ -1,0 +1,95 @@
+<main class="form-signin m-auto" *ngIf="showPage" [@fadeIn]="!showPage">
+  <div class="container-fluid w-100">
+    <form #f="ngForm" (ngSubmit)="register()" class="w-50 text-center container">
+      <h2 class="h3 mb-3 fw-bold pt-5">REGISTRATI</h2>
+
+      <div class="form-floating">
+        <input
+          required
+          [(ngModel)]="data.name"
+          #nomes="ngModel"          ngModel
+          type="email"
+          name="email"
+          class="form-control my-1"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">name</label>
+        <div
+        class="alert alert-danger my-3"
+        role="alert"
+        *ngIf="nomes.invalid && nomes.touched"
+        >Campo obbligatorio</div
+      >
+      </div>
+      <div class="form-floating">
+        <input
+          required
+          [(ngModel)]="data.username"
+          #nomes="ngModel"
+          ngModel
+          type="surname"
+          name="password"
+          class="form-control my-1"
+          id="floatingPassword"
+          placeholder="username"
+        />
+        <label for="floatingPassword">username</label>
+        <div
+        class="alert alert-danger my-3"
+        role="alert"
+        *ngIf="nomes.invalid && nomes.touched"
+        >Campo obbligatorio</div
+      >
+      </div>
+      <div class="form-floating">
+        <input
+          [(ngModel)]="data.email"
+          #nomes="ngModel"
+          ngModel
+          type="text"
+          name="name"
+          class="form-control my-1"
+          id="floatingInput"
+          placeholder="email"
+        />
+        <label for="floatingInput">email</label>
+        <div
+        class="alert alert-danger my-3"
+        role="alert"
+        *ngIf="nomes.invalid && nomes.touched"
+        >Campo obbligatorio</div
+      >
+      </div>
+      <div class="form-floating">
+        <input
+          [(ngModel)]="data.password"
+          #nomes="ngModel"
+          ngModel
+          type="password"
+          name="surname"
+          class="form-control my-1"
+          id="floatingInput"
+          placeholder="Surname"
+        />
+        <label for="floatingInput">password</label>
+        <div
+        class="alert alert-danger my-3"
+        role="alert"
+        *ngIf="nomes.invalid && nomes.touched"
+        >Campo obbligatorio</div
+      >
+      </div>
+      <button
+        type="submit"
+        [disabled]="f.invalid"
+        class="btn btn-success"
+        [routerLink]="['/dashboard']"
+      >
+        registrati
+      </button>
+      <p class="mt-5 mb-3 text-light">© 2017–2023</p>
+    </form>
+  </div>
+</main>
+

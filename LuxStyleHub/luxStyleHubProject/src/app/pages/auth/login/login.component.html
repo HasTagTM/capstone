@@ -1,0 +1,58 @@
+<main class="form-signin m-auto" *ngIf="showPage" [@fadeIn]="!showPage">
+  <div class="container-fluid w-100">
+    <form (ngSubmit)="login()" #f="ngForm" class="w-50 text-center container">
+      <h2 class="mb-3 fw-bold pt-5">Please sign in</h2>
+
+      <div class="form-floating mb-2">
+        <input
+          [(ngModel)]="data.username"
+          required
+          #nomes="ngModel"
+          ngModel
+          type="text"
+          name="username"
+          class="form-control"
+          id="floatingInput"
+          placeholder="username"
+        />
+        <label for="floatingInput">Email address</label>
+        <div
+          class="alert alert-danger my-3"
+          role="alert"
+          *ngIf="nomes.invalid && nomes.touched"
+          >Campo obbligatorio</div
+        >
+        </div>
+
+      <div class="form-floating">
+        <input
+          required
+          [(ngModel)]="data.password"
+          #nomes="ngModel"
+          ngModel
+          type="password"
+          name="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+        />
+        <label for="floatingPassword">password</label>
+        <div
+          class="alert alert-danger my-3"
+          role="alert"
+          *ngIf="nomes.invalid && nomes.touched"
+          >Campo obbligatorio</div
+        >
+        </div>
+
+      <button
+        [disabled]="f.invalid"
+        class="btn btn-primary w-100 py-2"
+        [routerLink]="['/dashboard']"
+      >
+        Sign in
+      </button>
+      <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
+    </form>
+  </div>
+</main>

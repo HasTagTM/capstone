@@ -3,16 +3,37 @@ package com.luxstylehub.server.security.service;
 import java.util.HashSet;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.luxstylehub.server.security.configuration.IndirizzoConfiguration;
 import com.luxstylehub.server.security.entity.Indirizzo;
 import com.luxstylehub.server.security.repository.IndirizzoRepository;
 
 @Service
 public class IndirizzoService {
 
+	private Logger log = LoggerFactory.getLogger(IndirizzoService.class);
+	
 	@Autowired IndirizzoRepository db;
+	@Autowired @Qualifier("crea_indirizzo") ObjectProvider<Indirizzo> indProv;
+	
+	public Indirizzo creaIndirizzo(String citta, String regione, String territorio, String sigla) {
+		Indirizzo i = indProv.getObject().builder()
+				.città(citta)
+				.regione(regione)
+				.territorio(territorio)
+				.sigla(sigla)
+				.build();
+		db.save(i);
+		System.out.println();
+		log.info("indirizzo creato con successo e aggiunto al db" + i.getId());
+		return i;
+	}
 	
 	public Indirizzo add(Indirizzo andress) {
 		return db.save(andress);

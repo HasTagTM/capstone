@@ -1,11 +1,14 @@
 package com.luxstylehub.server.security.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,18 +22,20 @@ import com.luxstylehub.server.security.entity.Prodotto;
 import com.luxstylehub.server.security.service.ProdottoService;
 
 @RestController
+//@CrossOrigin(origins = {"*"}, maxAge = 3600, allowedHeaders = "*")
 @RequestMapping("/prodotti")
 public class ProdottoController {
 
 	@Autowired ProdottoService prodSvc;
 	
-	@PostMapping
+	@PostMapping("/add")
 	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<?> crea(@RequestBody Prodotto f) {
         return new ResponseEntity<Prodotto>(prodSvc.crea(f), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
+//    @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
     public ResponseEntity<?> getById(@PathVariable long id) {
         return new ResponseEntity<Prodotto>(prodSvc.getById(id), HttpStatus.OK);
     }
@@ -47,7 +52,15 @@ public class ProdottoController {
         return new ResponseEntity<String>(prodSvc.elimina(id), HttpStatus.OK);
     }
     
+    @GetMapping(value ="/all")
+    @PreAuthorize("isAuthenticated()")
+    public ResponseEntity<List<Prodotto>> getAll() {
+    	List<Prodotto> list = prodSvc.getAllContacts();
+    	return new ResponseEntity<List<Prodotto>>(list, HttpStatus.OK);
+    }
+    
     @GetMapping
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN') or hasRole('MODERATOR')")
     public ResponseEntity<Page<Prodotto>> getAll(Pageable pageable) {
         // http://localhost:8080/api/contacts/pageable?page=0&size=10&sort=age,ASC
         // ?page=0&size=10&sort=age,ASC -> sono i parametri che saranno contenuti nell'ogg di tipo Pageable

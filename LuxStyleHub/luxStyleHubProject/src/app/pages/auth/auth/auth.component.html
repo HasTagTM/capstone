@@ -1,0 +1,186 @@
+<head>
+  <!-- <style>
+    @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Pixelify+Sans&display=swap");
+  </style> -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+  </style>
+</head>
+<main>
+  <div *ngIf="showPage" [@fadeIn]="!showPage" class="container-fluid">
+    <div class="row image">
+      <div id="sidebar-sx" class="col-md-3">
+        <div class="list-group" style="height: 100vh">
+          <!-- Sidebar sinistra -->
+
+          <div
+            class="mt-2 d-flex flex-wrap justify-content-center align-items-center"
+          >
+            <h3 class="c-green py-3 text-center mt-3">COLLABORATORI</h3>
+            <img class="background0" height="300px" width="200" alt="" />
+          </div>
+
+          <div class="d-flex pt-5 align-items-center">
+            <div class="c-green col-6 ps-4 me-2">
+              <p>
+                <strong>Gucci</strong>: Scarpe, T-shirt Gucci: moda e comfort
+                per ogni occasione.
+              </p>
+            </div>
+            <a href="https://www.gucci.com/it/it/" target="_blank">
+              <div class="list-group text-light col-6">
+                <img
+                  src="https://static.vecteezy.com/ti/vettori-gratis/p1/20335968-gucci-logo-vettore-gucci-icona-gratuito-vettore-gratuito-vettoriale.jpg"
+                  alt="rabbits"
+                  class="img4 collaboratori mx-3"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="d-flex pt-5 align-items-center">
+            <a href="https://www.levi.com/US/en_US/" target="_blank">
+              <div class="list-group text-light col-6">
+                <img
+                  src="https://static.vecteezy.com/ti/vettori-gratis/p3/23871690-levis-marca-logo-simbolo-design-abiti-moda-vettore-illustrazione-con-nero-sfondo-gratuito-vettoriale.jpg"
+                  alt="rabbits"
+                  class="img4 collaboratori mx-3"
+                />
+              </div>
+            </a>
+            <div class="c-green col-6 ps-4 me-2">
+              <p>
+                <strong>Levi's</strong>: T-shirt Levi's: stile di ogni genere.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex pt-5 align-items-center">
+            <div class="c-green col-6 ps-4 me-2">
+              <p>
+                <strong>Dsquared2</strong>: Felpe Dsquared2: moda e comfort in
+                uno.
+              </p>
+            </div>
+            <a href="https://www.dsquared2.com/it/" target="_blank">
+              <div class="list-group text-light col-6">
+                <img
+                  src="data:image/png;base64,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"
+                  alt="rabbits"
+                  class="img4 collaboratori mx-3"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="d-flex pt-5 align-items-center">
+            <a href="https://www.gucci.com/it/it/" target="_blank">
+              <div class="list-group text-light col-6">
+                <img
+                  src="https://i.pinimg.com/736x/9c/53/f4/9c53f4861fc3dd937dc3bd9f101b5813.jpg"
+                  alt="rabbits"
+                  class="img4 collaboratori mx-3"
+                />
+              </div>
+            </a>
+            <div class="c-green col-6 ps-4 me-2">
+              <p>
+                <strong>Nike</strong> : Scarpe Nike: per lo sport e il comfort.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" id="middle">
+        <div class="list-group col-md-12">
+          <!-- Contenuto principale -->
+          <h1 class="mt-3 ms-3 fw-bold text-center">LA MODA DI QUALITA'</h1>
+          <p class="text-b ms-4 my-3">
+            Siamo un'azienda dedicata alla moda e all'eleganza, impegnata a
+            offrire ai nostri clienti prodotti di alta qualità che possano
+            diventare parte del loro stile unico e durare nel tempo.
+          </p>
+          <h1 class="fw-bold text-center">Cosa offriamo?</h1>
+          <div class="pb-4">
+            <div class="d-flex m-5 justify-content-center align-items-center">
+              <img class="background1" height="200px" width="200px" alt="" />
+              <p class="text-center m-5 fs-4 fw-bold">SHOES</p>
+            </div>
+            <div class="d-flex m-5 justify-content-center align-items-center">
+              <p class="text-center m-5 fs-4 fw-bold">T-SHIRT</p>
+              <img class="background2" height="200px" width="200px" alt="" />
+            </div>
+            <div class="d-flex m-5 justify-content-center align-items-center">
+              <img class="background3" height="200px" width="200px" alt="" />
+              <p class="text-center m-3 fs-4 fw-bold">SWEATSHIRT</p>
+            </div>
+            <div class="d-flex m-5 justify-content-center align-items-center">
+              <p class="text-center m-5 fs-4 fw-bold">JEANS</p>
+              <img class="background4" height="200px" width="200px" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sidebar-dx" class="col-md-3 bg-dark">
+        <!-- Sidebar destra -->
+        <h3 class="text-center mt-4 c-green">"I nostri Prodotti"</h3>
+        <div class="d-flex">
+          <div class="text-light col-6">
+            <img
+              class="m-0"
+              src="https://www.ladulsatina.com/wp-content/uploads/2022/04/tessuto-denim-03_blog-cucito_low-768x1024.jpg"
+              alt="dogcure"
+              class="img4 h-100 w-100 px-2"
+            />
+          </div>
+          <div class="col-6 ps-2 c-green h-50">
+            I nostri jeans sono realizzati con i migliori materiali e sono
+            disponibili in una varietà di stili e colori.
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="c-green col-6 ps-4 me-2">
+            Le nostre scarpe sono alla moda e confortevoli. Sono disponibili in
+            una varietà dal casual al formale.
+          </div>
+          <div class="list-group text-light col-6">
+            <img
+              class="m-0"
+              src="https://www.sneakerjagers.com/_next/image?url=https:%2F%2Fblog.sneakerjagers.com%2Fwp-content%2Fuploads%2F2023%2F04%2Fjordan-line-up-1.png&w=750&q=100"
+              alt="rabbits"
+              class="img4 h-100 mx-3"
+            />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="list-group text-light col-6">
+            <img
+              class="m-0"
+              src="https://img4.dhresource.com/0x0/f3/albu/km/m/04/6a88dfb1-18ee-4149-93cc-219df75d81b0.jpg"
+              alt="catjump"
+              class="img4 h-100 mx-2"
+            />
+          </div>
+          <div class="col-6 ps-2 c-green">
+            Le nostre felpe sono morbide e calde. Sono disponibili in una
+            varietà di colori e stili.
+          </div>
+        </div>
+
+        <div class="d-flex mb-5">
+          <div class="c-green col-6 ps-4 me-2">
+            Le nostre t-shirt sono realizzate con cotone di alta qualità e sono
+            disponibili in una varietà di colori e stili.
+          </div>
+          <div class="list-group col-6">
+            <img
+              class="m-0"
+              src="https://cdna.lystit.com/400/500/n/photos/mytheresa/56f67f62/gucci-orange-Polo-in-jacquard-GG.jpeg"
+              alt="doggame"
+              class="img4 h-100 mx-3"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

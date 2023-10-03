@@ -1,5 +1,6 @@
 package com.luxstylehub.server.security.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,6 +15,7 @@ import com.luxstylehub.server.security.payload.LoginDto;
 import com.luxstylehub.server.security.payload.RegisterDto;
 import com.luxstylehub.server.security.payload.RegisterResponse;
 import com.luxstylehub.server.security.service.AuthService;
+import com.luxstylehub.server.security.service.AuthServiceImpl;
 
 
 
@@ -23,6 +25,7 @@ import com.luxstylehub.server.security.service.AuthService;
 public class AuthController {
 
     private AuthService authService;
+    @Autowired private AuthServiceImpl as;
 
     public AuthController(AuthService authService) {
         this.authService = authService;
@@ -37,6 +40,7 @@ public class AuthController {
         JWTAuthResponse jwtAuthResponse = new JWTAuthResponse();
         jwtAuthResponse.setUsername(loginDto.getUsername());
         jwtAuthResponse.setAccessToken(token);
+        jwtAuthResponse.setRoles(as.getUser(loginDto.getUsername()).getRoles());
 
         return ResponseEntity.ok(jwtAuthResponse);
     }

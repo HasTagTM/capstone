@@ -58,8 +58,6 @@ public class Prodotto {
 	private Categories categoria;
 	
 	private Boolean preferito;
-	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinColumn(name = "recensioni_id")
-	private List<Recensione> recensioni;
+
+
 }

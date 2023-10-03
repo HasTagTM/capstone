@@ -1,0 +1,17 @@
+body {
+  background-image: linear-gradient(to right bottom, #12402b, #30dc8f);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kaushan Script', cursive;
+  margin-top: 200px;
+
+}
+h2{
+  color: gold;
+}
+
+button{
+  color: gold;
+}

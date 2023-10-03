@@ -1,0 +1,110 @@
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+  </style>
+</head>
+<main class="w-100">
+<header class="text-bg-dark position-fixed top-0 z-1 w-100">
+  <div class="container-fluid">
+    <div
+      class="d-flex flex-wrap align-items-center justify-content-lg-start"
+    >
+    <div class="d-flex align-items-center w-100 justify-content-between">
+      <a
+        href="/"
+        class="d-flex align-items-center text-white text-decoration-none"
+      >
+        <img
+          class="bi me-2 rounded-circle "
+          width="70"
+          height="70"
+          src="https://e7.pngegg.com/pngimages/2/1016/png-clipart-silhouette-of-a-dove-bird-wings-logo.png"
+          alt="Bootstrap"
+        />
+      </a>
+      <h1>LUXSTYLEHUB</h1>
+      <a *ngIf="authSvc.isLoggedin$"
+      (click)="logout()"
+      type="button"
+      class="btn btn-outline-warning h-50 me-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+      </svg>
+    </a>
+  </div>
+  <div class="container">
+      <ul
+        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+      >
+      <li>
+        <a [routerLink]="['/auth']" class="nav-link px-2 text-white mx-3"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/dashboard']" class="nav-link px-2 text-white mx-3 fade show"
+          >Catalogo</a
+        >
+      </li>
+
+        <li>
+          <a [routerLink]="['categories/shoes']" class="nav-link px-2 text-white mx-3 fade show">Shoes</a>
+        </li>
+        <li>
+          <a [routerLink]="['categories/sweatshirt']" class="nav-link  text-white mx-3"
+            >sweatshirt</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['categories/jeans']" class="nav-link  text-white mx-3"
+            >jeans</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['categories/t_shirt']" class="nav-link  text-white mx-3"
+            >T-shirt</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="nav-link mx-3 text-white"
+            [routerLink]="['/create']"
+            >Aggiungi Prodotto</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['chi-siamo']" class="nav-link px-2 text-white mx-3"
+            >Chi siamo</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['faqs']" class="nav-link px-2 text-white mx-3"
+            >FAQs</a
+          >
+        </li>
+      </ul>
+    </div>
+
+      <div class="mx-3 my-2 text-center w-100">
+
+          <button
+            type="button"
+            class="btn btn-outline-light me-2"
+            [routerLink]="['/auth', 'login']"
+          >
+            Accedi
+          </button>
+        <button
+          type="button"
+          class="btn btn-outline-black btn-warning"
+          [routerLink]="['/auth', 'register']"
+        >
+          Registrati
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+</main>

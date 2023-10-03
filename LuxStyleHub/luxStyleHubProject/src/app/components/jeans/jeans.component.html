@@ -1,0 +1,124 @@
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+  </style>
+</head>
+<main *ngIf="showPage" [@fadeIn]="!showPage">
+  <svg
+    (click)="apriCarrello()"
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="currentColor"
+    class="bi bi-cart-check-fill carrello m-2 h-50 p-1 mt-4"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"
+    />
+  </svg>
+  <span *ngIf="carrello.length > 0" class="carrello-count fs-3 fw-bold">{{
+    carrello.length
+  }}</span>
+
+  <!-- Div del carrello completo -->
+  <div class="carrello-container text-center" *ngIf="carrelloAperto">
+    <!-- Intestazione del carrello -->
+    <div class="carrello-header">
+      <h3>Il tuo Carrello</h3>
+      <button
+        class="close-button btn btn-warning m-2"
+        (click)="chiudiCarrello()"
+      >
+        Chiudi Carrello
+      </button>
+    </div>
+
+    <!-- Contenuto del carrello -->
+    <ul class="carrello-list text-center">
+      <!-- Itera sui prodotti nel carrello -->
+      <li *ngFor="let prodotto of carrello" class="carrello-item">
+        <div class="prodotto-info">
+          <span class="prodotto-nome">{{ prodotto.nome }}</span>
+          <span class="prodotto-prezzo">{{ prodotto.prezzo | currency }}</span>
+        </div>
+        <button
+          class="rimuovi-button btn btn-danger m-2 text-center"
+          (click)="rimuoviDalCarrello(prodotto)"
+        >
+          Rimuovi
+        </button>
+      </li>
+    </ul>
+
+    <!-- Totale del carrello -->
+    <p class="carrello-totale">
+      Totale: {{ calcolaTotaleCarrello() | currency }}
+    </p>
+  </div>
+  <div class="container pb-5">
+    <div class="row">
+      <div *ngFor="let prodotto of prodotti" class="col-6 col-lg-4 mb-3">
+        <div
+          class="animal-card text-light mx-md-2 pt-3 mt-5 px-md-3 text-center rounded"
+          style="background-color: rgb(34, 105, 24)"
+        >
+          <div>
+            <h2 class="display-5">{{ prodotto.nome }}</h2>
+            <p class="lead">{{ prodotto.descrizione }}</p>
+            <p class="lead">{{ prodotto.prezzo }}</p>
+            <p class="lead">{{ prodotto.categoria }}</p>
+            <p class="lead">{{ prodotto.genere }}</p>
+            <p class="lead">{{ prodotto.recensione }}</p>
+          </div>
+          <div
+            class="me-2 w-100"
+            style="
+              height: 200px;
+              border-radius: 21px 21px 0 0;
+              background-image: url('{{ prodotto.immagineUrl }}');
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+          <div class="py-3">
+            <button
+              class="btn btn-primary m-2"
+              [routerLink]="['/dashboard', 'detail', prodotto.id]"
+            >
+              Dettaglio
+            </button>
+          </div>
+          <button
+            class="btn btn-success m-2"
+            (click)="aggiungiAlCarrello(prodotto)"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-cart-check-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"
+              />
+            </svg>
+          </button>
+          <span
+            [ngClass]="{
+              fa: true,
+              'fa-heart': true,
+              'cuore-rosso': prodotto.preferito,
+              'fa-heart-o': !prodotto.preferito
+            }"
+            (click)="aggiungiAiPreferiti(prodotto)"
+          ></span>
+
+          <p *ngIf="prodotto.preferito">Prodotto aggiunto ai Preferiti!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

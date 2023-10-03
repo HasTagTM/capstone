@@ -1,0 +1,49 @@
+*{
+  color: black;
+}
+main {
+  background: linear-gradient(
+    180deg,
+    rgba(178, 255, 154, 1) 0%,
+    rgba(58, 141, 47, 1) 100%
+  );
+  font-family: 'Kaushan Script', cursive;
+  margin-top: 200px;
+}
+
+
+
+li{
+  list-style-type: none;
+}
+
+.animal-card{
+
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.188);
+  transition: all 0.3s;
+}
+
+.animal-card:hover{
+  scale: 1.1;
+}
+
+.carrello{
+  background-color:  rgb(174, 255, 150);
+  border-radius: 15px;
+  width: 50px;
+  border: solid 2px black;
+  cursor: pointer;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  height: 35px;
+}
+input{
+  border-radius: 15px;
+}
+
+.cuore-rosso {
+  color: red;
+}

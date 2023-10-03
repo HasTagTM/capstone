@@ -1,0 +1,109 @@
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+  </style>
+</head>
+<body *ngIf="showPage" [@fadeIn]="!showPage">
+  <main class="form-signin m-auto">
+    <div class="container-fluid w-100">
+      <form #f="ngForm" class="w-100 text-center container">
+        <h2 class="pt-5 fw-bold">CREA IL TUO PRODOTTO</h2>
+
+        <div class="m-2 text-light">
+          <input
+            placeholder="nome"
+            #nomes="ngModel"
+            #update="ngModel"
+            ngModel
+            id="nome"
+            type="text"
+            class="form-control"
+            name="nome"
+            [(ngModel)]="prodotto.nome"
+          />
+          <span *ngIf="update.invalid && nomes.touched"
+            >Campo obbligatorio</span
+          >
+        </div>
+        <div class="m-2 text-light">
+          <input
+            placeholder="descrizione"
+            #update="ngModel"
+            ngModel
+            id="descrizione"
+            type="text"
+            class="form-control"
+            name="descrizione"
+            [(ngModel)]="prodotto.descrizione"
+          />
+          <span *ngIf="update.invalid && nomes.touched"
+            >Campo obbligatorio</span
+          >
+        </div>
+        <div class="m-2 text-light">
+          <input
+            #nomes="ngModel"
+            ngModel
+            placeholder="prezzo"
+            id="prezzo"
+            type="number"
+            class="form-control"
+            name="prezzo"
+            [(ngModel)]="prodotto.prezzo"
+          />
+        </div>
+        <div class="m-2 text-light">
+          <input
+            #nomes="ngModel"
+            ngModel
+            id="immagineUrl"
+            placeholder="url"
+            type="text"
+            class="form-control"
+            name="immagineUrl"
+            [(ngModel)]="prodotto.immagineUrl"
+          />
+        </div>
+        <div class="m-2 text-light">
+          <input
+            #nomes="ngModel"
+            ngModel
+            placeholder="recensione"
+            id="recensione"
+            type="text"
+            class="form-control"
+            name="recensione"
+            [(ngModel)]="prodotto.recensione"
+          />
+        </div>
+        <select
+          name="categoria"
+          id="categoria"
+          class="form-select my-2"
+          aria-label="select"
+          [(ngModel)]="prodotto.genere"
+        >
+          <option value="">--scegli genere--</option>
+          <option value="{{ Genere.UNISEX }}">UNISEX</option>
+          <option value="{{ Genere.MAN }}">MAN</option>
+          <option value="{{ Genere.WOMAN }}">WOMAN</option>
+        </select>
+        <select
+          name="categoria"
+          id="categoria"
+          class="form-select my-2"
+          aria-label="select"
+          [(ngModel)]="prodotto.categoria"
+        >
+          <option value="">--scegli categoria--</option>
+          <option value="{{ Categories.SCARPE }}">SHOES</option>
+          <option value="{{ Categories.JEANS }}">JEANS</option>
+          <option value="{{ Categories.T_SHIRT }}">T_SHIRT</option>
+          <option value="{{ Categories.FELPE }}">SWEATSHIRT</option>
+        </select>
+        <button class="btn btn-primary m-2" (click)="edit()">CREA</button>
+      </form>
+    </div>
+  </main>
+</body>
+

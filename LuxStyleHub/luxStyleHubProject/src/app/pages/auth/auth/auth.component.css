@@ -1,0 +1,271 @@
+*{
+  font-family: 'Kaushan Script', cursive;
+
+  box-sizing: border-box;
+
+}
+
+#sidebar-sx {
+  background: linear-gradient(
+      180deg,
+      rgb(75, 47, 15) 0%,
+      rgb(0, 0, 0) 100%
+    );
+}
+.footerImg{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+#middle {
+  margin-top: 150px;
+    background: linear-gradient(
+      180deg,
+      rgba(178, 255, 154, 1) 0%,
+      rgba(58, 141, 47, 1) 100%
+    );
+
+  h1 {
+    color: black;
+    font-size: 4em;
+  }
+  .text-b {
+    font-size: 2em;
+    line-height: 1em;
+  }
+  img:hover {
+    transform: scale(1.2);
+  }
+  button {
+    border-color: #12402b;
+    background-color: #12402b;
+    font-weight: bold;
+    width: 200px;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.644);
+  }
+  button:hover {
+    background-color: #30dc8f;
+    transform: scale(1.3);
+    z-index: 1;
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+}
+
+.c-green {
+  color: rgba(255, 255, 255, 0.801);
+  text-shadow: 0 5px 10px rgba(255, 228, 76, 0.5);
+}
+
+#sidebar-dx {
+  background: linear-gradient(
+      180deg,
+      rgb(75, 47, 15) 0%,
+      rgb(0, 0, 0) 100%
+    );
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+sidebar-dx img {
+  max-width: 100%;
+  height: auto; /* Per mantenere l'aspetto proporzionato delle immagini */
+}
+
+/* Gestisci l'overflow per il contenitore della sidebar destra */
+#sidebar-dx {
+  overflow: hidden;
+}
+
+/* Nascondi la sidebar destra quando la larghezza è inferiore a 768px */
+@media (max-width: 767px) {
+  #sidebar-dx {
+    display: none;
+  }
+  #sidebar-sx {
+    display: none;
+  }
+
+}
+
+/* Espandi il contenuto principale quando la larghezza è inferiore a 768px */
+@media (max-width: 1147px) {
+  .background0{
+    display: none;
+  }
+}
+@media (max-width: 1147px) {
+  h3{
+    display: none;
+  }
+}
+
+.img4{
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+
+.rabbit {
+  position: relative;
+  right: 20px;
+}
+
+.background0{
+  box-shadow: 5px 5px 5px  rgba(189, 153, 153, 0.644);
+  border-radius: 50px;
+    transition: all 0.5s;
+  animation: changeBackground0 16s infinite ease-in-out;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 150px;
+
+}
+img:hover {
+  transform: scale(1.1);
+}
+
+.background0{
+  box-shadow: 5px 5px 5px  rgba(189, 153, 153, 0.644);
+
+    transition: all 0.5s;
+  animation: changeBackground0 16s infinite ease-in-out;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@keyframes changeBackground0{
+  0%, 100%{
+    background-image: url('https://i.pinimg.com/736x/65/70/29/657029a9d2354984e4c7b7c6f8cf54fc.jpg');
+  }
+  25%{
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/11/921/desktop-wallpaper-pin-on-glam-treats-gold-gucci.jpg');
+  }
+  50%{
+    background-image: url('https://static.vecteezy.com/ti/vettori-gratis/p3/23871593-levis-logo-marca-simbolo-nome-bianca-design-abiti-moda-vettore-illustrazione-con-nero-sfondo-gratuito-vettoriale.jpg');
+  }
+  75%{
+    background-image: url('https://i.pinimg.com/564x/d8/d9/76/d8d976c1842a20158a59f91d9be20cea.jpg');
+  }
+}
+
+.background1{
+  box-shadow: 5px 5px 5px  rgba(189, 153, 153, 0.644);
+  border-radius: 50px;
+    transition: all 0.5s;
+  animation: changeBackground1 16s infinite ease-in-out;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes changeBackground1{
+  0%, 100%{
+    background-image: url('https://cdn.shopify.com/s/files/1/2358/2817/files/AirJordan4RetroThunder_2023.png?v=1693559714&width=1940');
+  }
+  25%{
+    background-image: url('https://www.mai-senza.com/cdn/shop/products/jordan4shimmer_2eed3b2b-03b7-4c33-9647-c6bcd82e7a4c.jpg?v=1631900930');
+  }
+  50%{
+    background-image: url('https://cdn.shopify.com/s/files/1/0496/4325/8009/products/baskets-air-jordan-4-military-black-pour-homme-et-femme-disponible-sur-kikikickz-328445.jpg?v=1686767244');
+  }
+  75%{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR38Q9xfRTElwdvbUtyp1dwb_wa-RrCZO4NMw&usqp=CAU');
+  }
+}
+
+.background2{
+  box-shadow: 5px 5px 5px  rgba(189, 153, 153, 0.644);
+  border-radius: 50px;
+    transition: all 0.5s;
+  animation: changeBackground2 16s infinite ease-in-out;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes changeBackground2{
+  0%, 100%{
+    background-image: url('https://images.stylight.net/image/upload/t_web_product_330x440max_nobg/q_auto:eco,f_auto/jgglero9c4dlt5juckaz.jpg');
+  }
+  25%{
+    background-image: url('https://i.pinimg.com/736x/fe/cd/dc/fecddc64bb11b0b2663e9674cd53b95c.jpg');
+  }
+  50%{
+    background-image: url('https://img.mytheresa.com/512/512/66/jpeg/catalog/product/73/P00706500.jpg');
+  }
+  75%{
+    background-image: url('https://cdna.lystit.com/400/500/n/photos/mytheresa/5877c827/gucci-blue-GG-Cotton-blend-Polo-Shirt.jpeg');
+  }
+}
+
+
+.background3{
+  box-shadow: 5px 5px 5px  rgba(189, 153, 153, 0.644);
+  border-radius: 50px;
+    transition: all 0.5s;
+  animation: changeBackground3 16s infinite ease-in-out;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes changeBackground3{
+  0%, 100%{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjgJ1xZuE24PeLDXBMM94ONRmHBBiGwuTtIg&usqp=CAU');
+  }
+  25%{
+    background-image: url('https://cdna.lystit.com/photos/balardi/f7e2408f/dsquared--Felpa-d2-con-stampa-tigre.jpeg');
+  }
+  50%{
+    background-image: url('https://www.corteccisiena.it/shop/resources/images/cartThumbinals/large-P23---dsquared2---S74GU0687%20S25516100.JPG');
+  }
+  75%{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5W4ywciS74ANQnkkRZ7fMUvwko6gfL8yzlw&usqp=CAU');
+  }
+}
+
+
+.background4{
+  box-shadow: 5px 5px 5px  rgba(189, 153, 153, 0.644);
+  border-radius: 50px;
+    transition: all 0.5s;
+  animation: changeBackground4 16s infinite ease-in-out;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+@keyframes changeBackground4{
+  0%, 100%{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQExwJYrAQIq5L0HeyiytPpDZjJJXFFLy2zPg&usqp=CAU');
+  }
+  25%{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqFfvE3uxQg1QFTONKwcFMpLNnkJ6O1k86tQ&usqp=CAU');
+  }
+  50%{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjBvPWLXJFsNoQpo-FlNHptWpMYPnjK0R5Dw&usqp=CAU');
+  }
+  75%{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-TQ1V-7qMVX4yytpUoVJ7bIe7vGEFUzEJLg&usqp=CAU');
+  }
+}
+.collaboratori{
+  width: 150px;
+  height: 120px;;
+}
+
+

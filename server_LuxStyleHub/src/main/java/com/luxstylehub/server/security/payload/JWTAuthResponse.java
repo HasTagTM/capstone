@@ -1,5 +1,9 @@
 package com.luxstylehub.server.security.payload;
 
+import java.util.Set;
+
+import com.luxstylehub.server.security.entity.Role;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

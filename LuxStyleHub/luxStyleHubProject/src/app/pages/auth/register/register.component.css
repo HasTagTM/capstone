@@ -1,0 +1,18 @@
+.ng-invalid.ng-untouched{
+  border-color: red;
+}
+span{
+
+  background-color: rgb(219, 133, 133);
+}
+main{
+  background-image: linear-gradient( to right bottom, #12402b, #30DC8F);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert{
+  background-color: red;
+}
