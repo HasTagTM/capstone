@@ -1,12 +1,14 @@
-*{
-  color: black;
-}
+
 main {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(178, 255, 154, 1) 0%,
     rgba(58, 141, 47, 1) 100%
-  );
+  ); */
+  background-image: url('https://png.pngtree.com/background/20230612/original/pngtree-lion-in-space-nebula-wallpaper-picture-image_3176915.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: 'Kaushan Script', cursive;
   margin-top: 211px;
 }
@@ -17,9 +19,8 @@ li{
 }
 
 .animal-card{
-
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.188);
   transition: all 0.3s;
+  opacity: 0.80;
 }
 
 .animal-card:hover{
@@ -27,10 +28,9 @@ li{
 }
 
 .carrello{
-  background-color:  rgb(174, 255, 150);
+  background-color:  rgb(186, 197, 241);
   border-radius: 15px;
   width: 50px;
-  border: solid 2px black;
   cursor: pointer;
 }
 

@@ -9,14 +9,15 @@ span{
   background-color: rgb(219, 133, 133);
 }
 main{
-  background-image: linear-gradient( to right bottom, #12402b, #30DC8F);
+  height: 90vh;
+  background-image: linear-gradient( to right bottom, #7942c7, #cbe0d7);
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .register{
-  margin-top: 170px;
+  margin-top: 220px;
 }
 .alert{
   background-color: red;

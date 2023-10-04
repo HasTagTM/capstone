@@ -1,11 +1,19 @@
 body {
-  background-image: linear-gradient(to right bottom, #12402b, #30dc8f);
+  /* background-image: linear-gradient(to right bottom, #12402b, #30dc8f); */
+  background-image: url('https://img.freepik.com/premium-photo/blue-artistic-lion-black-background-illuminated-image-king-jungle-generative-ai_58409-28139.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Kaushan Script', cursive;
   margin-top: 200px;
+
+}
+form{
+  opacity: 0.65;
 
 }
 h2{

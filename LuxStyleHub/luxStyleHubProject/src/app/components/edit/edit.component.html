@@ -64,18 +64,6 @@
             [(ngModel)]="prodotto.immagineUrl"
           />
         </div>
-        <div class="m-2 text-light">
-          <input
-            #nomes="ngModel"
-            ngModel
-            placeholder="recensione"
-            id="ingredienti"
-            type="text"
-            class="form-control"
-            name="ingredienti"
-            [(ngModel)]="prodotto.recensione"
-          />
-        </div>
         <button class="btn btn-primary m-2" (click)="edit()">
           Modifica
         </button>

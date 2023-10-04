@@ -61,7 +61,7 @@
       <div *ngFor="let prodotto of prodotti" class="col-6 col-lg-4 mb-3">
         <div
           class="animal-card text-light mx-md-2 pt-3 mt-5 px-md-3 text-center rounded"
-          style="background-color: rgb(34, 105, 24)"
+          style="background-color:  rgb(8, 29, 6)"
         >
           <div>
             <h2 class="display-5">{{ prodotto.nome }}</h2>
@@ -107,13 +107,13 @@
             [ngClass]="{
               fa: true,
               'fa-heart': true,
-              'cuore-rosso': prodotto.preferito,
-              'fa-heart-o': !prodotto.preferito
+              'cuore-rosso': !prodotto.preferito,
+              'fa-heart-o': prodotto.preferito
             }"
             (click)="aggiungiAiPreferiti(prodotto)"
           ></span>
 
-          <p *ngIf="prodotto.preferito">Prodotto aggiunto ai Preferiti!</p>
+          <p *ngIf="!prodotto.preferito">Prodotto aggiunto ai Preferiti!</p>
         </div>
       </div>
     </div>

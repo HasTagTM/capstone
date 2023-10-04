@@ -1,19 +1,22 @@
-*{
-  color: black;
-}
+
 main {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(178, 255, 154, 1) 0%,
     rgba(58, 141, 47, 1) 100%
-  );
+  ); */
+  background-image: url('https://img.freepik.com/premium-photo/lion-with-blue-background-word-lion-it_900958-27316.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: 'Kaushan Script', cursive;
   margin-top: 200px;
 }
 
 .animal-card{
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.188);
+  box-shadow: 5px 5px 5px rgba(186, 197, 241);
   transition: all 0.3s;
+  opacity: 0.80;
 }
 
 .animal-card:hover{
@@ -24,7 +27,7 @@ main {
 }
 
 .carrello{
-  background-color:  rgb(174, 255, 150);
+  background-color:  rgb(186, 197, 241);
   border-radius: 15px;
   width: 50px;
   border: solid 2px black;

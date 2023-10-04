@@ -48,11 +48,7 @@ export class ShoesComponent {
     this.showPage = true;
     this.getShoes();
   }
-  // getShoes() {
-  //   this.prodSvc.getCategories("SCARPE").subscribe((data) => {
-  //     this.prodotti = data.map(prodotto => ({ ...prodotto, isAggiuntoAiPreferiti: false }));
-  //   });
-  // }
+
 
   getShoes() {
     this.prodSvc.getCategories("SCARPE").subscribe((data) => {

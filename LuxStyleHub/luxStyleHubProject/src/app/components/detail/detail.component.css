@@ -1,9 +1,14 @@
 main {
-  background: linear-gradient(
+  height: 52vh;
+  background-image: url('https://img.freepik.com/premium-photo/blue-artistic-lion-black-background-illuminated-image-king-jungle-generative-ai_58409-28139.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background: linear-gradient(
     180deg,
     rgba(178, 255, 154, 1) 0%,
     rgba(58, 141, 47, 1) 100%
-  );
+  ); */
   font-family: 'Kaushan Script', cursive;
   margin-top: 200px;
 }
@@ -11,6 +16,7 @@ main {
 .animal-card{
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.188);
   transition: all 0.3s;
+  opacity: 0.78;;
 }
 
 .animal-card:hover{

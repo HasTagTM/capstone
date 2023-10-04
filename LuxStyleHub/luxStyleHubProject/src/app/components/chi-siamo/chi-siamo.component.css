@@ -1,13 +1,18 @@
 main {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(178, 255, 154, 1) 0%,
     rgba(58, 141, 47, 1) 100%
-  );
+  ); */
+  background-image: url('https://img.freepik.com/premium-photo/blue-eagle-with-blue-background_652021-462.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: 'Kaushan Script', cursive;
   margin-top: 200px;
+  color: wheat;
 }
 
 h2{
-  border-bottom: solid 2px black;
+  border-bottom: solid 2px white
 }

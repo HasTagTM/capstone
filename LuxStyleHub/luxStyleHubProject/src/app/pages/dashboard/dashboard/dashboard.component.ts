@@ -189,7 +189,7 @@ export class DashboardComponent implements OnInit{
 
       // Filtra i prodotti in base al carattere inserito
       this.prodotti = this.prodotti.filter(prodotto =>
-        prodotto.nome.toLowerCase().startsWith(carattereMinuscolo)
+        prodotto.nome.toLowerCase().includes(carattereMinuscolo)
       );
     } else {
       // Se il campo di ricerca è vuoto, mostra tutti i prodotti

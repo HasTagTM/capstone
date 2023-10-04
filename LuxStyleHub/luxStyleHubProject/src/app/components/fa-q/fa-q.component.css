@@ -1,13 +1,18 @@
 main {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(178, 255, 154, 1) 0%,
     rgba(58, 141, 47, 1) 100%
-  );
+  ); */
+  color: white;
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/001/909/019/original/blue-planet-earth-moving-slowly-on-dark-background-free-video.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: 'Kaushan Script', cursive;
   margin-top: 200px;
 }
 
 h2{
-  border-bottom: solid 2px black;
+  border-bottom: solid 2px white
 }

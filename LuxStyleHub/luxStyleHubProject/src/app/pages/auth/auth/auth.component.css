@@ -7,6 +7,7 @@
 .home{
   margin-top: 211px;
 }
+
 #sidebar-sx {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkfJIHh4CF8IX128CB33-5dOJjTrdQx2undw&usqp=CAU');
   /* background: linear-gradient(
@@ -138,7 +139,7 @@ sidebar-dx img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 150px;
+
 
 }
 img:hover {
