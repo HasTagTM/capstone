@@ -4,6 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PagamentoService {
+  isPaid = false;
 
-  constructor() { }
+  constructor() {}
+
+  pay() {
+    this.isPaid = true;
+  }
+
 }

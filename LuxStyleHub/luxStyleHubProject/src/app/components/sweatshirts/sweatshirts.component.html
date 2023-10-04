@@ -56,7 +56,7 @@
       Totale: {{ calcolaTotaleCarrello() | currency }}
     </p>
   </div>
-  <div class="container pb-5 color-darck">
+  <div class="container mt-3 pb-5">
     <div class="row">
       <div *ngFor="let prodotto of prodotti" class="col-6 col-lg-4 mb-3">
         <div
@@ -64,12 +64,11 @@
           style="background-color: rgb(34, 105, 24)"
         >
           <div>
-            <h2 class="display-5">{{ prodotto.nome }}</h2>
-            <p class="lead">{{ prodotto.descrizione }}</p>
-            <p class="lead">{{ prodotto.prezzo }} €</p>
-            <p class="lead">{{ prodotto.categoria }}</p>
-            <p class="lead">{{ prodotto.genere }}</p>
-            <p class="lead">{{ prodotto.recensione }}</p>
+            <div>
+              <h2 class="display-5">{{ prodotto.nome }}</h2>
+              <p class="lead">{{ prodotto.categoria }}</p>
+              <p class="lead">{{ prodotto.genere }}</p>
+            </div>
           </div>
           <div
             class="me-2 w-100"

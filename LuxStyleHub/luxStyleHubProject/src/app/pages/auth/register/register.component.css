@@ -1,3 +1,6 @@
+*{
+  font-family: 'Kaushan Script', cursive;
+}
 .ng-invalid.ng-untouched{
   border-color: red;
 }
@@ -12,7 +15,16 @@ main{
   justify-content: center;
   align-items: center;
 }
-
+.register{
+  margin-top: 170px;
+}
 .alert{
   background-color: red;
+}
+/* Nascondi la sidebar destra quando la larghezza è inferiore a 768px */
+@media (max-width: 767px) {
+
+  .register{
+    margin-top: 300px;
+  }
 }

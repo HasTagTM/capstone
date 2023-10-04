@@ -1,5 +1,10 @@
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+  </style>
+</head>
 <main class="form-signin m-auto" *ngIf="showPage" [@fadeIn]="!showPage">
-  <div class="container-fluid w-100">
+  <div class="register container-fluid w-100">
     <form #f="ngForm" (ngSubmit)="register()" class="w-50 text-center container">
       <h2 class="h3 mb-3 fw-bold pt-5">REGISTRATI</h2>
 
@@ -83,12 +88,11 @@
       <button
         type="submit"
         [disabled]="f.invalid"
-        class="btn btn-success"
+        class="btn btn-success my-2"
         [routerLink]="['/dashboard']"
       >
         registrati
       </button>
-      <p class="mt-5 mb-3 text-light">© 2017–2023</p>
     </form>
   </div>
 </main>

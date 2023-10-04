@@ -1,9 +1,15 @@
+*{
+  font-family: 'Kaushan Script', cursive;
+}
 main {
   background-image: linear-gradient(to right bottom, #12402b, #30dc8f);
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.login{
+  margin-top: 170px;
 }
 h2{
   color: gold;
@@ -16,4 +22,11 @@ button{
 .alert{
   background-color: red;
   font-weight: bold;
+}
+/* Nascondi la sidebar destra quando la larghezza è inferiore a 768px */
+@media (max-width: 767px) {
+
+  .login{
+    margin-top: 320px;
+  }
 }

@@ -1,6 +1,11 @@
 *{
   font-family: 'Permanent Marker', cursive;
 }
+header{
+  background-image: url('https://t4.ftcdn.net/jpg/03/06/17/51/360_F_306175178_zbOGg7uORhCeIzoSJCvfGlUDhK6fcX3S.jpg');
+  background-position: center;
+  background-size: cover;
+}
 
 a {
   color: rgb(99, 164, 103);

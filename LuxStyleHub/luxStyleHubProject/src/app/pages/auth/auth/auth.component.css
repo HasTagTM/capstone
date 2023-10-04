@@ -1,16 +1,19 @@
 *{
   font-family: 'Kaushan Script', cursive;
-
+  color: wheat;
   box-sizing: border-box;
 
 }
-
+.home{
+  margin-top: 211px;
+}
 #sidebar-sx {
-  background: linear-gradient(
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkfJIHh4CF8IX128CB33-5dOJjTrdQx2undw&usqp=CAU');
+  /* background: linear-gradient(
       180deg,
       rgb(75, 47, 15) 0%,
       rgb(0, 0, 0) 100%
-    );
+    ); */
 }
 .footerImg{
   background-position: center;
@@ -19,12 +22,17 @@
   opacity: 0.5;
 }
 #middle {
-  margin-top: 150px;
-    background: linear-gradient(
+
+    /* background: linear-gradient(
       180deg,
       rgba(178, 255, 154, 1) 0%,
       rgba(58, 141, 47, 1) 100%
-    );
+    ); */
+
+  background-image: url('https://www.melamorsicata.it/wp-content/uploads/2017/03/Dark-City-View.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   h1 {
     color: black;
@@ -63,16 +71,17 @@
 }
 
 #sidebar-dx {
-  background: linear-gradient(
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkfJIHh4CF8IX128CB33-5dOJjTrdQx2undw&usqp=CAU');
+  /* background: linear-gradient(
       180deg,
       rgb(75, 47, 15) 0%,
       rgb(0, 0, 0) 100%
-    );
+    ); */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 50px;
+
 }
 sidebar-dx img {
   max-width: 100%;
@@ -92,7 +101,9 @@ sidebar-dx img {
   #sidebar-sx {
     display: none;
   }
-
+  .home{
+    margin-top: 330px;
+  }
 }
 
 /* Espandi il contenuto principale quando la larghezza è inferiore a 768px */

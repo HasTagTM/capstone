@@ -1,5 +1,10 @@
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+  </style>
+</head>
 <main class="form-signin m-auto" *ngIf="showPage" [@fadeIn]="!showPage">
-  <div class="container-fluid w-100">
+  <div class="login container-fluid w-100">
     <form (ngSubmit)="login()" #f="ngForm" class="w-50 text-center container">
       <h2 class="mb-3 fw-bold pt-5">Please sign in</h2>
 
@@ -47,7 +52,7 @@
 
       <button
         [disabled]="f.invalid"
-        class="btn btn-primary w-100 py-2"
+        class="btn btn-primary w-100 my-2 py-2"
         [routerLink]="['/dashboard']"
       >
         Sign in

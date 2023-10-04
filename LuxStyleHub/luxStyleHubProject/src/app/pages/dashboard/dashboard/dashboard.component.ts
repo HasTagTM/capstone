@@ -9,6 +9,7 @@ import { Iprodotto } from 'src/app/interfaces/iprodotto';
 import { IUser } from 'src/app/interfaces/iuser';
 import { AuthService } from 'src/app/services/auth.service';
 import { OrdineService } from 'src/app/services/ordine.service';
+import { PagamentoService } from 'src/app/services/pagamento.service';
 import { ProdottoService } from 'src/app/services/prodotto.service';
 
 @Component({
@@ -64,7 +65,7 @@ export class DashboardComponent implements OnInit{
     console.error(`Errore nel caricamento dell'immagine per il prodotto: ${prodotto.nome}`);
     // Puoi anche effettuare altre azioni come mostrare un'immagine di fallback.
   }
-  constructor(private prodSvc:ProdottoService, private authSvc: AuthService, private carrelloSvc: OrdineService){
+  constructor(private prodSvc:ProdottoService, private authSvc: AuthService, private carrelloSvc: OrdineService, pagamentoService: PagamentoService){
     admin: authSvc.isLoggedin$.subscribe(user => {
       this.user?.roles.forEach(r => {
         if (r.roleName === "ROLE_ADMIN") this.isAdmin = true
@@ -158,7 +159,9 @@ export class DashboardComponent implements OnInit{
     }
   }
 
-
+  apriPagamento() {
+    this.apriPagamento();
+  }
 
   apriCarrello() {
     this.carrelloAperto = !this.carrelloAperto;

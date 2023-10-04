@@ -7,7 +7,7 @@
   <main class="form-signin m-auto">
     <div class="container-fluid w-100">
       <form #f="ngForm" class="w-100 text-center container">
-        <h2 class="pt-5 fw-bold">CREA IL TUO PRODOTTO</h2>
+        <h2 class="pt-5 fw-bold mb-4">CREA IL TUO PRODOTTO</h2>
 
         <div class="m-2 text-light">
           <input
@@ -64,18 +64,7 @@
             [(ngModel)]="prodotto.immagineUrl"
           />
         </div>
-        <div class="m-2 text-light">
-          <input
-            #nomes="ngModel"
-            ngModel
-            placeholder="recensione"
-            id="recensione"
-            type="text"
-            class="form-control"
-            name="recensione"
-            [(ngModel)]="prodotto.recensione"
-          />
-        </div>
+
         <select
           name="categoria"
           id="categoria"
@@ -83,7 +72,6 @@
           aria-label="select"
           [(ngModel)]="prodotto.genere"
         >
-          <option value="">--scegli genere--</option>
           <option value="{{ Genere.UNISEX }}">UNISEX</option>
           <option value="{{ Genere.MAN }}">MAN</option>
           <option value="{{ Genere.WOMAN }}">WOMAN</option>
@@ -95,13 +83,12 @@
           aria-label="select"
           [(ngModel)]="prodotto.categoria"
         >
-          <option value="">--scegli categoria--</option>
           <option value="{{ Categories.SCARPE }}">SHOES</option>
           <option value="{{ Categories.JEANS }}">JEANS</option>
           <option value="{{ Categories.T_SHIRT }}">T_SHIRT</option>
           <option value="{{ Categories.FELPE }}">SWEATSHIRT</option>
         </select>
-        <button class="btn btn-primary m-2" (click)="edit()">CREA</button>
+        <button class="btn btn-primary m-2 mb-5" (click)="edit()">CREA</button>
       </form>
     </div>
   </main>

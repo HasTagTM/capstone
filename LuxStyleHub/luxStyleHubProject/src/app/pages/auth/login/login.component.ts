@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit{
   login(){
     this.authSvc.login(this.data).subscribe(accessData => {
       this.router.navigate(['/dashboard'])
-      alert("ben venuto" + accessData.username)
+      alert("ben venuto" + ' ' + accessData.username)
     })
   }
 }

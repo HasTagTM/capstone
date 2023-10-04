@@ -1,0 +1,57 @@
+<div class="container">
+  <h2>Simulazione di Pagamento</h2>
+
+  <!-- Visualizza il totale del carrello -->
+  <div class="alert alert-info mt-3">
+    Totale del Carrello: {{ totaleCarrello | currency }}
+  </div>
+
+  <!-- Modulo di pagamento -->
+  <form (submit)="effettuaPagamento()">
+    <div class="form-group">
+      <label for="titolareCarta">Titolare della Carta</label>
+      <input
+        type="text"
+        class="form-control"
+        id="titolareCarta"
+        [(ngModel)]="pagamento.titolareCarta"
+      />
+    </div>
+    <div class="form-group">
+      <label for="numeroCarta">Numero della Carta</label>
+      <input
+        type="text"
+        class="form-control"
+        id="numeroCarta"
+        [(ngModel)]="pagamento.numeroCarta"
+      />
+    </div>
+    <div class="form-group">
+      <label for="dataScadenza">Data di Scadenza</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dataScadenza"
+        [(ngModel)]="pagamento.dataScadenza"
+      />
+    </div>
+    <div class="form-group">
+      <label for="codiceSicurezza">Codice di Sicurezza</label>
+      <input
+        type="text"
+        class="form-control"
+        id="codiceSicurezza"
+        [(ngModel)]="pagamento.codiceSicurezza"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Paga</button>
+  </form>
+
+  <!-- Risultato della simulazione -->
+  <div *ngIf="pagamentoSimulatoConSuccesso" class="alert alert-success mt-3">
+    Pagamento completato con successo!
+  </div>
+  <div *ngIf="erroreNelPagamento" class="alert alert-danger mt-3">
+    Si è verificato un errore durante il pagamento. Si prega di riprovare.
+  </div>
+</div>

@@ -10,8 +10,11 @@ import { SweatshirtsComponent } from 'src/app/components/sweatshirts/sweatshirts
 import { TShirtComponent } from 'src/app/components/t-shirt/t-shirt.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
+import { PagamentoComponent } from 'src/app/components/pagamento/pagamento.component';
+import { AuthGuard } from '../../auth/guard/guard.guard';
 
 const routes: Routes = [
+
   {
   path: '', component: DashboardComponent
 },
@@ -19,11 +22,12 @@ const routes: Routes = [
     path: 'edit/:id' , component: EditComponent
   },
   {
-    path: 'create' , component: CreateComponent
+    path: 'detail/:id' , component: DetailComponent
   },
   {
-    path: 'detail/:id' , component: DetailComponent
-  }
+    path: 'carrello/pagamento' , component: PagamentoComponent
+  },
+
 
 ];
 

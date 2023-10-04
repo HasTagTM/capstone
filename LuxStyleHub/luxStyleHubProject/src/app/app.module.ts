@@ -19,6 +19,7 @@ import { SweatshirtsComponent } from './components/sweatshirts/sweatshirts.compo
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PagamentoComponent } from './components/pagamento/pagamento.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     FaQComponent,
-    ChiSiamoComponent
+    ChiSiamoComponent,
+    PagamentoComponent
 
   ],
   imports: [

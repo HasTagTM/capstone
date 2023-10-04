@@ -5,3 +5,13 @@
   li, a{
   color:white;
   }
+/* Nascondi la sidebar destra quando la larghezza è inferiore a 768px */
+@media (max-width: 767px) {
+
+  .product_footer{
+    display: none;
+  }
+  .chi_siamo_footer{
+    display: none;
+  }
+}
