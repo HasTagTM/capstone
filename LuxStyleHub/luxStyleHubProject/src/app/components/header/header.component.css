@@ -8,14 +8,12 @@
 } */
 h1{
   font-weight: bold;
-  color:  rgb(97, 124, 223);
+  color:  rgb(147, 160, 207);
   font-family: 'Kaushan Script', cursive;
 }
-li{
-  color:  rgb(97, 124, 223);
-}
+
 a {
-  color:  rgb(97, 124, 223);
+  color:  rgb(147, 160, 207);
   font-size: 1rem;
   text-decoration: none;
   margin-top: 1em;
@@ -28,7 +26,7 @@ a {
   &:before, &:after {
       position: absolute;
       content: '';
-      border-bottom: 3px solid rgb(97, 124, 223);
+      border-bottom: 3px solid rgb(147, 160, 207);
       border-radius: 1em;
       bottom: .3em;
       transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);

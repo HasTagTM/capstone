@@ -1,15 +1,18 @@
 *{
-  color: white;
+  color:  rgb(147, 160, 207);
   font-family: 'Permanent Marker', cursive;
   }
   li, a{
-  color:white;
+    color:  rgb(147, 160, 207);
   }
   /* .footerComp{
     background-image: url('https://t4.ftcdn.net/jpg/03/06/17/51/360_F_306175178_zbOGg7uORhCeIzoSJCvfGlUDhK6fcX3S.jpg');
     background-position: center;
     background-size: cover;
   } */
+  footer{
+    border-top: 2px solid rgb(147, 160, 207);;
+  }
 /* Nascondi la sidebar destra quando la larghezza è inferiore a 768px */
 @media (max-width: 767px) {
 
