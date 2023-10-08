@@ -5,8 +5,8 @@ main {
     rgba(178, 255, 154, 1) 0%,
     rgba(58, 141, 47, 1) 100%
   ); */
-  background-image: url('https://ae01.alicdn.com/kf/H24879ea7d30b4dd5ab27c0ca6d063010Y/Sogno-cielo-stellato-luna-notte-delfino-blu-mare-fotografia-sfondo-per-neonato-doccia-bambini-torta-di.jpg');
-  background-repeat: no-repeat;
+  /* background-image: url('https://w0.peakpx.com/wallpaper/525/254/HD-wallpaper-disegno-leone-icio.jpg'); */
+  background-image: linear-gradient(to right bottom, #7942c7, #cbe0d7);  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   font-family: 'Kaushan Script', cursive;

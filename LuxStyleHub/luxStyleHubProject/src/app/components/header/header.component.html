@@ -4,7 +4,7 @@
   </style>
 </head>
 <main class="w-100">
-<header class="text-light position-fixed top-0 z-1 w-100 ">
+<header class="text-light bg-dark position-fixed top-0 z-1 w-100 ">
   <div class="container-fluid">
     <div
       class="d-flex flex-wrap align-items-center justify-content-lg-start"
@@ -15,7 +15,7 @@
         class="d-flex align-items-center text-white text-decoration-none"
       >
         <img
-          class="bi me-2 border-0"
+          class="bi me-2 border-0 rounded-circle"
           width="70"
           height="70"
           src="https://img.pixers.pics/pho_wat(s3:700/FO/48/26/73/09/700_FO48267309_5d2fea3b693b2eb20d795954c7d36bfb.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/poster-logo-leone-la-forza-e-il-coraggio-concept-vector.jpg.jpg"
@@ -38,49 +38,49 @@
         class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
       >
       <li>
-        <a [routerLink]="['/auth']" class="nav-link px-2 text-white mx-3"
+        <a [routerLink]="['/auth']" class="nav-link px-2 mx-3"
           >Home</a
         >
       </li>
       <li>
-        <a [routerLink]="['/dashboard']" class="nav-link px-2 text-white mx-3 fade show"
+        <a [routerLink]="['/dashboard']" class="nav-link px-2 mx-3 fade show"
           >Catalogo</a
         >
       </li>
 
         <li>
-          <a [routerLink]="['categories/shoes']" class="nav-link px-2 text-white mx-3 fade show">Shoes</a>
+          <a [routerLink]="['categories/shoes']" class="nav-link px-2 mx-3 fade show">Shoes</a>
         </li>
         <li>
-          <a [routerLink]="['categories/sweatshirt']" class="nav-link  text-white mx-3"
+          <a [routerLink]="['categories/sweatshirt']" class="nav-link mx-3"
             >sweatshirt</a
           >
         </li>
         <li>
-          <a [routerLink]="['categories/jeans']" class="nav-link  text-white mx-3"
+          <a [routerLink]="['categories/jeans']" class="nav-link mx-3"
             >jeans</a
           >
         </li>
         <li>
-          <a [routerLink]="['categories/t_shirt']" class="nav-link  text-white mx-3"
+          <a [routerLink]="['categories/t_shirt']" class="nav-link mx-3"
             >T-shirt</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="nav-link mx-3 text-white"
+            class="nav-link mx-3"
             [routerLink]="['/create']"
             >Aggiungi Prodotto</a
           >
         </li>
         <li>
-          <a [routerLink]="['chi-siamo']" class="nav-link px-2 text-white mx-3"
+          <a [routerLink]="['chi-siamo']" class="nav-link px-2 mx-3"
             >Chi siamo</a
           >
         </li>
         <li>
-          <a [routerLink]="['faqs']" class="nav-link px-2 text-white mx-3"
+          <a [routerLink]="['faqs']" class="nav-link px-2 mx-3"
             >FAQs</a
           >
         </li>

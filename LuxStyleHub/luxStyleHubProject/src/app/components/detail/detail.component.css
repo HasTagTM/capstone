@@ -1,7 +1,7 @@
 main {
   height: 52vh;
-  background-image: url('https://img.freepik.com/premium-photo/blue-artistic-lion-black-background-illuminated-image-king-jungle-generative-ai_58409-28139.jpg');
-  background-repeat: no-repeat;
+  /* background-image: url('https://w0.peakpx.com/wallpaper/525/254/HD-wallpaper-disegno-leone-icio.jpg'); */
+  background-image: linear-gradient(to right bottom, #7942c7, #cbe0d7);  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   /* background: linear-gradient(
