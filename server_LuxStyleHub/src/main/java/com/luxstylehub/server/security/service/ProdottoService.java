@@ -44,7 +44,7 @@ public class ProdottoService {
 				.build();
 		prodottoRepo.save(r);
 		System.out.println();
-		log.info("recensione creata con successo e aggiunto al db" + r.getId());
+		log.info("indirizzo creato con successo e aggiunto al db" + r.getId());
 		return r;
 	}
 
@@ -54,6 +54,14 @@ public class ProdottoService {
 		return prodottoRepo.save(f);
 	}
 	
+	public List<Prodotto> findByCategoria(Categories categoria) {
+		List<Prodotto> l = prodottoRepo.findByCategoria(categoria);
+		System.out.println();
+		log.info("Prodotti della categoria " + categoria + ":");
+		l.forEach(c -> log.info(c.toString()));
+		return l;
+	}
+	
 	public Prodotto getById(long id) {
 		if(!prodottoRepo.existsById(id))
 			throw new EntityNotFoundException("Impossibile trovare il prodotto");
@@ -61,7 +69,7 @@ public class ProdottoService {
 	}
 	
 	public Prodotto aggiorna(long id, Prodotto f) {
-		if(prodottoRepo.existsById(id) || f.getId()!=id)
+		if(!prodottoRepo.existsById(id) || f.getId()!=id)
 			throw new EntityNotFoundException("Impossibile trovare il prodotto");
 		return crea(f);
 	}
@@ -70,7 +78,7 @@ public class ProdottoService {
 		if(!prodottoRepo.existsById(id))
 			throw new EntityNotFoundException("Impossibile trovare il prodotto");
 		prodottoRepo.deleteById(id);
-		return "Fattura eliminata con successo";
+		return "prodotto eliminato con successo";
 	}
 
 	public List<Prodotto> getAllContacts() {

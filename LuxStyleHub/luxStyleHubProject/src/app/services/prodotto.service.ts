@@ -33,7 +33,7 @@ export class ProdottoService {
   }
 
   getAll(){
-    return this.http.get<Iprodotto[]>(this.apiUrl);
+    return this.http.get<Iprodotto[]>(this.apiUrl + "/all");
   }
 
   getCategories(categoria: String) {

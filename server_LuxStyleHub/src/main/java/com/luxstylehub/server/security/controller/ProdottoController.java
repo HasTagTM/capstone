@@ -16,14 +16,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.luxstylehub.server.enumerated.Categories;
 import com.luxstylehub.server.security.entity.Prodotto;
 import com.luxstylehub.server.security.service.ProdottoService;
 
 @RestController
-//@CrossOrigin(origins = {"*"}, maxAge = 3600, allowedHeaders = "*")
-@RequestMapping("/prodotti")
+@CrossOrigin(origins = {"*"}, maxAge = 3600, allowedHeaders = "*")
+@RequestMapping("/api/prodotti")
 public class ProdottoController {
 
 	@Autowired ProdottoService prodSvc;
@@ -33,11 +35,19 @@ public class ProdottoController {
     public ResponseEntity<?> crea(@RequestBody Prodotto f) {
         return new ResponseEntity<Prodotto>(prodSvc.crea(f), HttpStatus.OK);
     }
+	
 
     @GetMapping("/{id}")
 //    @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
     public ResponseEntity<?> getById(@PathVariable long id) {
         return new ResponseEntity<Prodotto>(prodSvc.getById(id), HttpStatus.OK);
+    }
+    
+    @GetMapping("/categories")
+    public ResponseEntity<List<?>> getCategoriess(@RequestParam("categoria") String categoriaStr) {
+        Categories categoria = Categories.valueOf(categoriaStr.toUpperCase());
+        List<Prodotto> list = prodSvc.findByCategoria(categoria);
+        return ResponseEntity.ok(list);
     }
 
     @PutMapping("/{id}")
@@ -48,16 +58,18 @@ public class ProdottoController {
 
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
-    public ResponseEntity<String> elimina(@PathVariable long id) {
-        return new ResponseEntity<String>(prodSvc.elimina(id), HttpStatus.OK);
+    public ResponseEntity<?> elimina(@PathVariable long id) {
+        prodSvc.elimina(id);
+        return ResponseEntity.noContent().build();
     }
     
-    @GetMapping(value ="/all")
+    @GetMapping("/all")
     @PreAuthorize("isAuthenticated()")
     public ResponseEntity<List<Prodotto>> getAll() {
     	List<Prodotto> list = prodSvc.getAllContacts();
     	return new ResponseEntity<List<Prodotto>>(list, HttpStatus.OK);
     }
+    
     
     @GetMapping
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN') or hasRole('MODERATOR')")

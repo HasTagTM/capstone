@@ -17,4 +17,8 @@ public class JWTAuthResponse {
 	private String username;
     private String accessToken;
     private String tokenType = "Bearer";
+	public void setRoles(Set<Role> roles) {
+		// TODO Auto-generated method stub
+		
+	}
 }
