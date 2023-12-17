@@ -51,7 +51,7 @@ export class AuthService {
   }
 
   signUp(data:Iregister){
-    return this.http.post<Ilogin>(this.apiUrl + 'api/auth/register', data)
+    return this.http.post<Ilogin>(this.apiUrl + 'api/auth/product/register', data)
     .pipe(catchError(this.errors))
   }
 
